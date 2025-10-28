@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Mariahh 🌻</title>
+  <meta name="description" content="A sunflower garden birthday letter for Mariahh." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --sun-1:#fff8db;
+      --sun-2:#ffe886;
+      --sun-3:#ffd54a;
+      --leaf:#2f7d32;
+      --text:#2d2a26;
+      --ink:#4a3b2f;
+      --white:#ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --bg:#fffdf6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg) 0%, #fffbe8 100%);
+      color:var(--text); font-family:Poppins, sans-serif;
+      line-height:1.65; overflow-x:hidden;
+    }
+    header{text-align:center;padding:60px 20px;}
+    h1{font-family:"Playfair Display",serif;font-size:3rem;color:#3b2a12;margin:0;}
+    p{max-width:700px;margin:10px auto;}
+    button{padding:10px 16px;border:none;border-radius:10px;background:linear-gradient(180deg,var(--sun-2), var(--sun-3));font-weight:600;color:#4a2b00;cursor:pointer}
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);place-items:center;}
+    .modal.open{display:grid;}
+    .modal-card{background:#fffdf6;padding:20px;border-radius:16px;text-align:center;max-width:400px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Birthday, Mariahh 🌻</h1>
+    <p>This little page is made just for you — a small sunflower garden full of warmth and light.</p>
+    <button id="bloomBtn">🌻 Click to Bloom</button>
+  </header>
+  <div class="modal" id="secretModal">
+    <div class="modal-card">
+      <h3>Secret Message 🌻</h3>
+      <p>(your secret message here 😏)</p>
+      <button onclick="document.getElementById('secretModal').classList.remove('open')">Close</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('bloomBtn').onclick = () => {
+      document.getElementById('secretModal').classList.add('open');
+    }
+  </script>
+</body>
+</html>
